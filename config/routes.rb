@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :customers
 
   resources :employees
   resources :jobs
@@ -8,13 +8,14 @@ Rails.application.routes.draw do
   resources :addresses
   resources :products
   resources :orders
+  
   resources :customers
 
   root 'home#index'
   get 'home/index'
 
-  get '/login', to: "home#login"
-  get '/signup', to: "home#signup"
+  #get '/login', to: "home#login"
+  #get '/signup', to: "home#signup"
 
 
 end

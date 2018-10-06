@@ -23,12 +23,19 @@ ActiveRecord::Schema.define(version: 20181006022828) do
   end
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "customer_id"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "phone"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "phone", null: false
     t.integer "address_id"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
