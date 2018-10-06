@@ -1,12 +1,13 @@
-class CreateCustumers < ActiveRecord::Migration[5.1]
+class CreateCustomers < ActiveRecord::Migration[5.1]
   def change
-    create_table :custumers do |t|
+    create_table :customers do |t|
       t.integer :customer_id
       t.string :first_name
       t.string :last_name
       t.string :email
+      t.string :password
       t.string :phone
-      t.int :address_id
+      t.integer :address_id
 
       t.timestamps
     end
