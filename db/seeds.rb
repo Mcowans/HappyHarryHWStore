@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Customer.create(first_name: 'Nathan', last_name: 'Hunt', email: 'nhunt@gmail.com', phone: '6305668989', address_id: '1' city: 'Oswego', state: 'IL', zip: '60503')
-Customer.create(first_name: 'Sam', last_name: 'Smith', email: 'superawesomedude93@aol.com', phone: '6306636544', address_id: '2' city: 'Warrenville', state: 'IL', zip: '60555')
-Customer.create(first_name: 'Danni', last_name: 'Williams', email: 'williamsd07@outlook.com', phone: '6307832109', address_id: '3' city: 'Aurora', state: 'IL', zip: '60506')
-Customer.create(first_name: 'Maria', last_name: 'Banks', email: 'banks932@gmail.com', phone: '3125499211', address_id: '4' city: 'Naperville', state: 'IL', zip: '60404')
-Customer.create(first_name: 'Tony', last_name: 'Smith', email: 'tsmith07@aurora.edu', phone: '630902774', address_id: '2' city: 'Warrenville', state: 'IL', zip: '60503')
+Customer.create(first_name: 'Nathan', last_name: 'Hunt', email: 'nhunt@gmail.com', phone: '6305668989', address_id: '1' )
+Customer.create(first_name: 'Sam', last_name: 'Smith', email: 'superawesomedude93@aol.com', phone: '6306636544', address_id: '2' )
+Customer.create(first_name: 'Danni', last_name: 'Williams', email: 'williamsd07@outlook.com', phone: '6307832109', address_id: '3' )
+Customer.create(first_name: 'Maria', last_name: 'Banks', email: 'banks932@gmail.com', phone: '3125499211', address_id: '4' )
+Customer.create(first_name: 'Tony', last_name: 'Smith', email: 'tsmith07@aurora.edu', phone: '630902774', address_id: '2' )
 
 
 Address.create(street: '123 Main St', city: 'Oswego', state: "IL", zip: '60503')
@@ -25,25 +25,25 @@ Address.create(street: '98 Gorgia Ln', city: 'North Aurora', state: "IL", zip: '
 Address.create(street: '4N81 Franklin Blvd', city: 'Naperville', state: "IL", zip: '60440')
 
 
-Order.create(custumer_id: "3", product_id: '2', amount: "4", date: "12-Sep-18")
-Order.create(custumer_id: "2", product_id: '3', amount: "33", date: "9-Dec-15")
-Order.create(custumer_id: "2", product_id: '1', amount: "10", date: "4-Aug-13")
-Order.create(custumer_id: "1", product_id: '2', amount: "4", date: "4-Aug-14")
-Order.create(custumer_id: "4", product_id: '5', amount: "15", date: "7-Apr-17")
+Order.create(customer_id: "3", product_id: '2', amount: "4", date: "12-Sep-18")
+Order.create(customer_id: "2", product_id: '3', amount: "33", date: "9-Dec-15")
+Order.create(customer_id: "2", product_id: '1', amount: "10", date: "4-Aug-13")
+Order.create(customer_id: "1", product_id: '2', amount: "4", date: "4-Aug-14")
+Order.create(customer_id: "4", product_id: '5', amount: "15", date: "7-Apr-17")
 
 
-Product.create(pirce: "10", deparment_name: "Hardware", sku: "211", quantity: '100', description: 'Hammer')
-Product.create(pirce: "4", deparment_name: "Plumbing", sku: "198", quantity: '321', description: 'Coupler')
-Product.create(pirce: "33", deparment_name: "Hardare", sku: "233", quantity: '12', description: 'Wrench')
-Product.create(pirce: "13", deparment_name: "Paint", sku: "354", quantity: '6', description: 'Red Paint')
-Product.create(pirce: "15", deparment_name: "Building Materials", sku: "578", quantity: '93', description: 'Singles')
+Product.create(price: "10", deparment_name: "Hardware", SKU: "211", quantity: '100', description: 'Hammer')
+Product.create(price: "4", deparment_name: "Plumbing", SKU: "198", quantity: '321', description: 'Coupler')
+Product.create(price: "33", deparment_name: "Hardare", SKU: "233", quantity: '12', description: 'Wrench')
+Product.create(price: "13", deparment_name: "Paint", SKU: "354", quantity: '6', description: 'Red Paint')
+Product.create(price: "15", deparment_name: "Building Materials", SKU: "578", quantity: '93', description: 'Singles')
 
 
-Employee.create(job_title: 'Manager', deparment_name: 'Front Name', first_name: 'Bethany', last_name: 'Rutter', email: "brutter@hhhardware.com", phone: "6305550932", street: '5', hire_date: '5-May-09')
-Employee.create(job_title: 'Assistant Manager', deparment_name: 'Hardware', first_name: 'Ethan', last_name: 'York', email: "eyork@hhhardware.com", phone: "7082437272", street: '6', hire_date: '30-Mar-10')
-Employee.create(job_title: 'full-time', deparment_name: 'Plumbing', first_name: 'Jim', last_name: 'Sommer', email: "jsommer@hhhardware.com", phone: "6308214443", street: '7', hire_date: '22-Jan-13')
-Employee.create(job_title: 'Part-time', deparment_name: 'Building Materials', first_name: 'Claire', last_name: 'Jenson', email: "cjenson@hhhardware.com", phone: "6307471101", street: '8', hire_date: '8-Jun-17')
-Employee.create(job_title: 'Part-time', deparment_name: 'Paint', first_name: 'Bethany', last_name: 'Kennedy', email: "pkenned@hhhwardware.com", phone: "6307822823", street: '9', hire_date: '23-Nov-17')
+Employee.create(job_title: 'Manager', deparment_name: 'Front Name', first_name: 'Bethany', last_name: 'Rutter', email: "brutter@hhhardware.com", phone: "6305550932", address_id: '5', hire_date: '5-May-09')
+Employee.create(job_title: 'Assistant Manager', deparment_name: 'Hardware', first_name: 'Ethan', last_name: 'York', email: "eyork@hhhardware.com", phone: "7082437272", address_id: '6', hire_date: '30-Mar-10')
+Employee.create(job_title: 'full-time', deparment_name: 'Plumbing', first_name: 'Jim', last_name: 'Sommer', email: "jsommer@hhhardware.com", phone: "6308214443", address_id: '7', hire_date: '22-Jan-13')
+Employee.create(job_title: 'Part-time', deparment_name: 'Building Materials', first_name: 'Claire', last_name: 'Jenson', email: "cjenson@hhhardware.com", phone: "6307471101", address_id: '8', hire_date: '8-Jun-17')
+Employee.create(job_title: 'Part-time', deparment_name: 'Paint', first_name: 'Bethany', last_name: 'Kennedy', email: "pkenned@hhhwardware.com", phone: "6307822823", address_id: '9', hire_date: '23-Nov-17')
 
 Job.create(job_title: 'Manager', salary: '45000')
 Job.create(job_title: 'Assistant Manager', salary: '32000')

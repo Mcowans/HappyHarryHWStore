@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :deparment_name
       t.integer :SKU
       t.integer :quantity
+      t.string :description
 
       t.timestamps
     end
