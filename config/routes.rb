@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :customers
+  devise_for :customers, :controllers => { registrations: 'registrations' }
 
   resources :employees
   resources :jobs
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :addresses
   resources :products
   resources :orders
-  
+
   resources :customers
 
   root 'home#index'
