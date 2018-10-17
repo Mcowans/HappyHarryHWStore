@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20181006022828) do
     t.string "encrypted_password", default: "", null: false
     t.string "phone", null: false
     t.integer "address_id"
+    t.integer "admin", default: 0
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"

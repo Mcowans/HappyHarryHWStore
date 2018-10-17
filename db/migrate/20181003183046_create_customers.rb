@@ -7,6 +7,7 @@ class CreateCustomers < ActiveRecord::Migration[5.1]
       t.string :encrypted_password, null: false, default: ""
       t.string :phone, null: false
       t.integer :address_id
+      t.integer :admin, default: 0
 
       #for email confirmation and lock accounts after x failed attempts to sign in
       t.string   :confirmation_token, unique: true
