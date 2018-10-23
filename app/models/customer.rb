@@ -4,4 +4,9 @@ class Customer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :validatable, #:rememberable,
          :confirmable, :lockable
+
+  #protected
+  #def confirmation_required?
+  #  false
+  #end
 end
