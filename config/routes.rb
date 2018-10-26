@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get 'home/index'
+  get 'home/contact'
 
   #get '/login', to: "home#login"
   #get '/signup', to: "home#signup"
