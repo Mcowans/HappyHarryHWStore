@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  resque_constraint = lambda do |request|
+    request.env['warden'].authenticate? && request.env['warden'].user.admin?
+  end
+
+  constraints resque_constraint do
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  end
   
   devise_for :customers, :controllers => { registrations: 'registrations' }
 
@@ -16,6 +22,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
   get 'home/contact'
+  get 'cart', to: "home#login"
 
   #get '/login', to: "home#login"
   #get '/signup', to: "home#signup"
