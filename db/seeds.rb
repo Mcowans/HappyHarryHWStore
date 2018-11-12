@@ -7,11 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Customer.create(first_name: 'Nathan', last_name: 'Hunt', email: 'nhunt@gmail.com', phone: '6305668989', address_id: '1' )
-Customer.create(first_name: 'Sam', last_name: 'Smith', email: 'superawesomedude93@aol.com', phone: '6306636544', address_id: '2' )
-Customer.create(first_name: 'Danni', last_name: 'Williams', email: 'williamsd07@outlook.com', phone: '6307832109', address_id: '3' )
-Customer.create(first_name: 'Maria', last_name: 'Banks', email: 'banks932@gmail.com', phone: '3125499211', address_id: '4' )
-Customer.create(first_name: 'Tony', last_name: 'Smith', email: 'tsmith07@aurora.edu', phone: '630902774', address_id: '2' )
+Customer.create(first_name: 'Nathan', last_name: 'Hunt', email: 'nhunt@gmail.com', encrypted_password: '$2a$11$tNF0Hc.AKcpqcX066lkSJu.YbMOyYc74zW5/1.SgHonBor0SGoML.', phone: '6305668989', address_id: '1' )
+Customer.create(first_name: 'Sam', last_name: 'Smith', email: 'superawesomedude93@aol.com', encrypted_password: '$2a$11$tNF0Hc.AKcpqcX066lkSJu.YbMOyYc74zW5/1.SgHonBor0SGoML.', phone: '6306636544', address_id: '2' )
+Customer.create(first_name: 'Danni', last_name: 'Williams', email: 'williamsd07@outlook.com', encrypted_password: '$2a$11$tNF0Hc.AKcpqcX066lkSJu.YbMOyYc74zW5/1.SgHonBor0SGoML.', phone: '6307832109', address_id: '3' )
+Customer.create(first_name: 'Maria', last_name: 'Banks', email: 'banks932@gmail.com', encrypted_password: '$2a$11$tNF0Hc.AKcpqcX066lkSJu.YbMOyYc74zW5/1.SgHonBor0SGoML.', phone: '3125499211', address_id: '4' )
+Customer.create(first_name: 'Tony', last_name: 'Smith', email: 'tsmith07@aurora.edu', encrypted_password: '$2a$11$tNF0Hc.AKcpqcX066lkSJu.YbMOyYc74zW5/1.SgHonBor0SGoML.', phone: '630902774', address_id: '2' )
+Customer.create(first_name: 'Jovanny', last_name: 'Perez', email: 'jova9991@gmail.com', encrypted_password: '$2a$11$tNF0Hc.AKcpqcX066lkSJu.YbMOyYc74zW5/1.SgHonBor0SGoML.', phone: '3312289037', address_id: '2' )
 
 
 Address.create(street: '123 Main St', city: 'Oswego', state: "IL", zip: '60503')
