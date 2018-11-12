@@ -1,0 +1,98 @@
+
+<!-- All the files that are required -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<%= stylesheet_link_tag "application" %>
+
+<!-- REGISTRATION FORM -->
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">register</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: 'text-left', id: "regirster-form") do |f| %>
+      <%= devise_error_messages! %>
+		
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="first_name" class="sr-only">First Name</label>
+						<%= f.text_field :first_name, id: :customer_first_name, class: "form-control",  placeholder: "First Name"%>
+					</div>
+
+					<div class="form-group">
+						<label for="last_name" class="sr-only">Last Name</label>
+            			<%= f.text_field :last_name, class: "form-control", id: :customer_last_name,  placeholder: "Last Name"%>
+					</div>
+
+					<div class="form-group">
+						<label for="email" class="sr-only">Email</label>
+						<%= f.text_field :email, id: :customer_email, class: "form-control", placeholder: "email", autocomplete: "email" %>
+						
+					</div>
+
+					<div class="form-group">
+						<label for="phone" class="sr-only">Phone</label>
+						<%= f.text_field :phone, id: :customer_phone, class: "form-control", placeholder: "Phone #"%>
+					</div>
+
+
+					<div class="form-group">
+						<label for="Password" class="sr-only">Password</label>
+            			<%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+					</div>
+
+					<div class="form-group">
+						<label for="password_confirm" class="sr-only">Password Confirm</label>
+            			<%= f.password_field  :password_confirm, class: "form-control",  placeholder: "Confirm password" %>
+					</div>
+					
+					
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" class="" id="reg_agree" name="reg_agree">
+						<label for="reg_agree">i agree with <a href="#">terms</a></label>
+					</div>
+				</div>
+
+        <%= f.submit '<i class="fa fa-chevron-right"></i>'.html_safe, class: "login-button" %>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+
+			</div>
+			<div class="etc-login-form">				
+				<p>already have an account? <%= link_to 'login here', new_customer_session_path %></p>
+			</div>
+		<% end %>
+	</div>
+	<!-- end:Main Form -->
+
+
+    <!-- FORGOT PASSWORD FORM -->
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">forgot password</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="forgot-password-form" class="text-left">
+			<div class="etc-login-form">
+				<p>When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>
+			</div>
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="fp_email" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="#">login here</a></p>
+				<p>new user? <a href="#">create new account</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
