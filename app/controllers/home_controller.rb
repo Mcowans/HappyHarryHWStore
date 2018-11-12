@@ -13,4 +13,9 @@ class HomeController < ApplicationController
   def contact
 
   end
+
+  def cart
+    @cart = Cart.where(:customer_id => current_customer.id ).all
+    #abort @cart.inspect
+  end
 end

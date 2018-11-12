@@ -5,38 +5,42 @@
 
 <h1>My Orders</h1>
 
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th>Order id</th>
-      <th>Product id</th>
-      <th>Customer Id</th>
-      <th>Total</th>
-      <th>Date</th>
-      <th>Options</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @orders.each do |order| %>
+<% if defined? orders %>
+  <table class="table">
+    <thead class="thead-dark">
       <tr>
-        <td><%= order.order_id %></td>
-        <td><%= order.customer_id %></td>
-        <td><%= order.product_id %></td>
-        <td><%= order.amount %></td>
-        <td><%= order.date %></td>
-        <% if customer_signed_in? %>
-          <% if current_customer.admin? %>
-            <td><%= link_to 'Show', order %></td>
-            <td><%= link_to 'Edit', edit_order_path(product) %></td>
-            <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-            <td><%= link_to 'Delete ', '/orders', {:class => "btn btn-success"} %></td>
-          <% end %>
-    <% end %>
-  </tbody>
+        <th>Order id</th>
+        <th>Product id</th>
+        <th>Customer Id</th>
+        <th>Total</th>
+        <th>Date</th>
+        <th>Options</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @orders.each do |order| %>
+        <tr>
+          <td><%= order.order_id %></td>
+          <td><%= order.customer_id %></td>
+          <td><%= order.product_id %></td>
+          <td><%= order.amount %></td>
+          <td><%= order.date %></td>
+          <% if customer_signed_in? %>
+            <% if current_customer.admin? %>
+              <td><%= link_to 'Show', order %></td>
+              <td><%= link_to 'Edit', edit_order_path(order) %></td>
+              <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+              <td><%= link_to 'Delete ', '/orders', {:class => "btn btn-success"} %></td>
+            <% end %>
+      <% end %>
+    </tbody>
 </table>
+<% else %>
+  <h1>No orders to show</h1>
+<% end %>
 
 <br>
 <% if customer_signed_in? %>
