@@ -4,7 +4,8 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.find_by customer_id: current_customer.id
+    @orders = Order.where(:customer_id => current_customer.id).all
+    
   end
 
   # GET /orders/1

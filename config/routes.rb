@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :deparments
   resources :addresses
   resources :products
-  resources :orders
+  #resources :orders
   #resources :carts
 
   resources :customers
@@ -28,6 +28,10 @@ Rails.application.routes.draw do
   get '/add_to_cart', to: "carts#add_to_cart"
 
   post '/add_to_cart', to: "carts#add_to_cart"
+
+  get "/orders", to: "orders#index"
+
+  get "place_order", to: "home#place_order"
 
   #get '/login', to: "home#login"
   #get '/signup', to: "home#signup"
